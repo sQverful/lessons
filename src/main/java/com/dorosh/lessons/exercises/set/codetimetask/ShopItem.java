@@ -1,4 +1,4 @@
-package com.dorosh.lessons.exercises.set.codeTimeTask;
+package com.dorosh.lessons.exercises.set.codetimetask;
 
 class ShopItem implements Comparable<ShopItem>{
 
