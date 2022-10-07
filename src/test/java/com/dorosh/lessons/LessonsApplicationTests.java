@@ -25,6 +25,11 @@ class LessonsApplicationTests {
         assertEquals(5, actualLimit);
     }
 
+    /*Task for self-learning:
+      - mark UserService class with @Deprecated
+      - write a test that asserts that UserService is deprecated
+      (has @Deprecated annotation above the class)
+     */
     @Test
     void checkIfUserServiceIsDeprecated() {
 

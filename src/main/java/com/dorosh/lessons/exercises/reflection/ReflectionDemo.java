@@ -14,6 +14,17 @@ public class ReflectionDemo {
         UserService userService = new UserServiceImpl(new UserRepositoryImpl());
         List<User> allUsers = userService.findAllUsers();
         System.out.println(allUsers);
+
+    }
+
+    void reflectionExample() throws NoSuchFieldException {
+
+        MyValueAnnotation annotation = User.class.getDeclaredField("age").getAnnotation(MyValueAnnotation.class);
+        int value = annotation.value();
+        String name = annotation.name();
+        System.out.println(User.class.getName()
+                + ": value= " + value + ","
+                + " name=" + name);
     }
 
 }
