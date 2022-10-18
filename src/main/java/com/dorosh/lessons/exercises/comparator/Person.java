@@ -1,7 +1,7 @@
 package com.dorosh.lessons.exercises.comparator;
 
-import java.util.ArrayList;
-import java.util.Collections;
+import java.io.Serial;
+import java.io.Serializable;
 import java.util.Comparator;
 import java.util.Iterator;
 import java.util.List;
@@ -12,7 +12,10 @@ import java.util.random.RandomGeneratorFactory;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class Person implements Comparable<Person> {
+public class Person implements Comparable<Person>, Serializable {
+
+    @Serial
+    private static final long serialVersionUID = 0;
 
     public Person(String name, Integer age) {
         this.id = new Random().nextInt(10);
